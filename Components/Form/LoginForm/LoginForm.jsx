@@ -5,11 +5,11 @@ import { FormControl } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { Link } from 'react-router-dom';
-import '../index.scss'
+import '../../index.scss'
 import { useNavigate } from "react-router-dom";
 import LoginIcon from '@mui/icons-material/Login';
 import MuiPhoneNumber from "material-ui-phone-number";
-import accountAPI from '../../API';
+import accountAPI from '../../../API';
 // import { AuthContext } from '../../../Context/GlobalContext';
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -31,7 +31,7 @@ export default function LoginForm() {
 
     const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 
-    const handleClick = async () => {
+    const handleSubmit = async () => {
         if(formData.isVerifiedByCapt)
             if(formData.phone.length > 0 && formData.password.length > 0){
                 //console.log("Sending login data:",formData);
@@ -93,7 +93,7 @@ export default function LoginForm() {
                     onChange={handleChange(keyitem)}
                 />;
             case 'keepLogin':
-                return <FormControlLabel key={keyitem} className='login-form__element' 
+                return <FormControlLabel key={keyitem} className='login-form__element' style={{marginBottom:'16px'}}
                     control={<Checkbox onChange={handleKeepLogin}/>} label="Keep Login" 
                     />;
             default:
@@ -108,38 +108,46 @@ export default function LoginForm() {
 
     return (
         <div className="form-container">
-            <center>
-            <FormControl className='login-form'
+            <form className='login-form'
                 style={{
                     borderRadius: "8px",
-					minWidth: "320px",
-                    maxWidth: "800px",
+					minWidth: "280px",
+                    maxWidth: '400px',
+                    minHeight: '460px'
                 }}>
-                <h1 className='text-center login-form__element' style={{width:'100%', textAlign: 'center'}}>Login</h1>
+                <h1 style={{width:'100%', textAlign: 'center', marginBottom:'16px'}}>Login</h1>
             
                 {Object.keys(formData).map(key => (renderItems(key)))}
 
-                <div className="text-center">
-                    <p className="login-form__register-text">
-                        No account? <Link to='/register'>Register</Link>
-                    </p>
-                    {/* <p className="login-form__register-text">
-                        Forgot password? <Link to='/forgot/password'>Send email</Link>
-                    </p> */}
+                <div style={{ display: 'flex', 
+                            alignContent: 'center', 
+                            justifyContent: 'center',
+                            marginBottom:'16px' }}>
+                    <ReCAPTCHA
+                        sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
+                        onChange={onCaptChange}/>
                 </div>
 
-                <ReCAPTCHA 
-                    sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
-                    onChange={onCaptChange}/>
+                <p style={{ fontSize: '14px',
+                        width:'100%', 
+                        textAlign: 'center', 
+                        marginTop: '24px' }}>
+                    No account? <Link to='/register'>Register</Link>
+                </p>
+                {/* <p className="login-form__register-text">
+                    Forgot password? <Link to='/forgot/password'>Send email</Link>
+                </p> */}
 
                 <Button startIcon={<LoginIcon />} 
-                    className='login-form__element login-form__button' type="submit" 
-                    onClick={handleClick}
-                    sx={{mt: 2}}
+                    style={{ width:'100%', 
+                        backgroundColor: 'hsl(162, 48%, 46%)',
+                        color: 'white',
+                        marginTop: '8px' }}
+                    type="submit"
+                    onClick={handleSubmit}
                     >Login</Button>
 
-            </FormControl>
-            </center>
+            </form>
         </div>
     )
 }

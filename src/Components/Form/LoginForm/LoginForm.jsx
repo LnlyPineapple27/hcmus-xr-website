@@ -78,7 +78,7 @@ export default function LoginForm() {
 					setAlert(true);
 
 
-					// navigate('/user');
+					navigate('/user');
 					return null;
 				})
 				.catch((err) => {
@@ -167,7 +167,7 @@ export default function LoginForm() {
 					}}
 				>
 					<ReCAPTCHA
-						sitekey="6LezmX8eAAAAALBZT87iNz2Z7oUmbZbM4mPu4y5S"
+						sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
 						onChange={() => setIsVerfied(true)}
 					/>
 				</div>
