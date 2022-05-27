@@ -103,7 +103,7 @@ export default function NavBar() {
 				) : null}
 
 				<Link to="/" className="nav-logo">
-					E-PAYMENT
+					HCMUS-XR
 				</Link>
 
 				{/* <Switch onChange={toggleLogin} /> */}

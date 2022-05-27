@@ -22,8 +22,9 @@ export default function Main() {
 					justifyContent: 'space-around', 
 					alignItems: 'flex-end'}} >
 					<div style={{ marginRight:'8px' }}>
-						<Typography variant="h2" color='blanchedalmond' sx={{ mb : 1 }}>Online Payment</Typography>
-						<Typography variant="h5" color='blanchedalmond' sx={{ my : 2 }}> Convenient way to pay your receipt, transfer money. </Typography>
+						<Typography variant="h2" color='blanchedalmond' sx={{ mb : 1 }}>HCMUS XR System</Typography>
+						<Typography variant="h5" color='blanchedalmond' sx={{ my : 2 }}> Login Page</Typography> 
+						{/* <Typography variant="h5" color='blanchedalmond' sx={{ my : 2 }}> Ứng dụng hệ thống Faceid login</Typography> */}
 					</div>
 					<div style={{ marginRight:'8px' }}>
 						<LoginForm/>
