@@ -67,12 +67,13 @@ export default function LoginForm() {
 					setLoading(false);
 					const name = ';.;';
 					console.log(res);
-					Cookies.get();
+					
+					//Cookies.get();
 					// console.log(document.cookie);
 					// const accessToken = res.data.accessToken;
 
 					// setUserLocal(name, accessToken);
-					// dispatch(update({ name, accessToken }));
+					dispatch(update({ name }));
 					setAlertType('success');
 					setAlertContent('LogIn Successfully.');
 					setAlert(true);

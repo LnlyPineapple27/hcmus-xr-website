@@ -1,6 +1,7 @@
 // import { Container, Typography } from "@material-ui/core";
 import React from "react";
 
+import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 const contactBody = {
     background: 'white',
@@ -9,15 +10,17 @@ const contactBody = {
 
 export default function Contact() {
     return (
-		<div style={contactBody} id='contact'>
-			<div style={{height: '56px'}}/>
-      <Divider />
-			<h1>Contact</h1>
-      <address>
-        <strong>HCMUS XR tour</strong><br />
-        Email:&nbsp;
-        <a href="mailto:datn.online.payment@gmail.com">datn.online.payment@gmail.com</a><br />
-      </address>
-		</div> 
+      <div style={contactBody} id='contact'>
+        <div style={{height: '56px'}}/>
+        <Divider />
+        <Container maxWidth='md' 
+            style={{ textAlign: 'center' }}>
+            <h1>Contact</h1>
+            <address>
+              Email:&nbsp;
+              <a href="mailto:datn.online.payment@gmail.com">datn.online.payment@gmail.com</a><br />
+            </address>  
+        </Container>
+      </div> 
     );
 };

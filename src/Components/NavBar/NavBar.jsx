@@ -27,11 +27,11 @@ const NavData = [
 		path: '/#contact',
 		className: 'nav-text',
 	},
-	// {
-	// 	title: 'FAQ',
-	// 	path: '/#faq',
-	// 	className: 'nav-text',
-	// },
+	{
+		title: 'FAQ',
+		path: '/#faq',
+		className: 'nav-text',
+	},
 ];
 
 const sideData = [
@@ -41,12 +41,12 @@ const sideData = [
 		className: 'side-text',
 		icons: 'home-alt',
 	},
-	{
-		title: 'Transfer',
-		path: '/user/transfer',
-		className: 'side-text',
-		icons: 'transfer-alt',
-	},
+	// {
+	// 	title: 'Transfer',
+	// 	path: '/user/transfer',
+	// 	className: 'side-text',
+	// 	icons: 'transfer-alt',
+	// },
 	{
 		title: 'Setting',
 		path: '/user/setting',

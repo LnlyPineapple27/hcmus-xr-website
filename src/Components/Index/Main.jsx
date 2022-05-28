@@ -23,7 +23,7 @@ export default function Main() {
 					alignItems: 'flex-end'}} >
 					<div style={{ marginRight:'8px' }}>
 						<Typography variant="h2" color='blanchedalmond' sx={{ mb : 1 }}>HCMUS XR System</Typography>
-						<Typography variant="h5" color='blanchedalmond' sx={{ my : 2 }}> Login Page</Typography> 
+						<Typography variant="h5" color='blanchedalmond' sx={{ my : 2 }}> Home Page</Typography> 
 						{/* <Typography variant="h5" color='blanchedalmond' sx={{ my : 2 }}> Ứng dụng hệ thống Faceid login</Typography> */}
 					</div>
 					<div style={{ marginRight:'8px' }}>

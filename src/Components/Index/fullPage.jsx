@@ -11,7 +11,7 @@ export default function fullPage() {
 			<Main/>
 			<About/>
 			<Contact/>
-			{/* <FAQ/> */}
+			<FAQ/>
 			<Footer/>
 		</>
 	);

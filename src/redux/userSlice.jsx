@@ -6,18 +6,18 @@ export const userSlice = createSlice({
 	name: 'user',
 	initialState: {
 		name: getUser(),
-		accessToken: getToken(),
+		// accessToken: getToken(),
 		loggedIn: getLoggedIn(),
 	},
 	reducers: {
 		update: (state, action) => {
 			state.name = action.payload.name;
-			state.accessToken = action.payload.accessToken;
+			// state.accessToken = action.payload.accessToken;
 			state.loggedIn = true;
 		},
 		remove: (state) => { 
             state.name = ''; 
-            state.accessToken = '';
+            // state.accessToken = '';
             state.loggedIn = false; 
         },
 	},
