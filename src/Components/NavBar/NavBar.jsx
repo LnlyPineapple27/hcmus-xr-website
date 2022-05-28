@@ -27,11 +27,11 @@ const NavData = [
 		path: '/#contact',
 		className: 'nav-text',
 	},
-	{
-		title: 'FAQ',
-		path: '/#faq',
-		className: 'nav-text',
-	},
+	// {
+	// 	title: 'FAQ',
+	// 	path: '/#faq',
+	// 	className: 'nav-text',
+	// },
 ];
 
 const sideData = [

@@ -10,7 +10,7 @@ import unknown_f from './imgs/teammembers/unknown_f.jpg'
 import unknown_m from './imgs/teammembers/unknown_m.jpg'
 const aboutBody = {
     background: 'white',
-	height: '100vh',
+	// height: '100vh',
 };
 
 
