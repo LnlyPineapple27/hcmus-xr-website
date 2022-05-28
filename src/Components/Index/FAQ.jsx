@@ -24,7 +24,7 @@ export default function FAQ() {
             <h1>FAQ</h1>
             <address>
               Survey link:&nbsp;
-              <a href="https://forms.gle/wA2evr3k8M1f26Pg8">Open here</a><br />
+              <a href="https://forms.gle/wA2evr3k8M1f26Pg8" target="_blank">Open here</a><br />
             </address>  
         </Container>
       </div> 
